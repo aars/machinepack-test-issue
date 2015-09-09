@@ -16,10 +16,14 @@ module.exports = {
   inputs: {
     string: {
       example: 'dot.notated.key',
+      typeclass: '*',
       required: true
     },
     object: {
       example: {'dot': {'notated': {'key': 'Value!'}}},
+      // Without this typeclass `machinepack exec` will fail which apparently
+      // doesn't use validate() method. It has no effect on tests.
+      typeclass: '*',
       required: true,
       validate: function () {
         // The example is used very strictly in validating input,
