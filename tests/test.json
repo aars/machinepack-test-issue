@@ -1,0 +1,12 @@
+{
+  "machine": "test",
+  "expectations": [
+    {
+      "using": {
+        "string": "some.key",
+        "object": {"some": {"key": "Value!"}}
+      },
+      "outcome": "success"
+    }
+  ]
+}
